@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "905535436158",
+    "firebase_url": "https://saferide-59b62.firebaseio.com",
+    "project_id": "saferide-59b62",
+    "storage_bucket": "saferide-59b62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905535436158:android:1e9f18675c764fd0",
+        "android_client_info": {
+          "package_name": "com.example.ecodrive.saferide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905535436158-ccef0nem0a092j3h15ps1rtfr28o9g7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB863rM2no7D_NVvaTbFaDxK5CtGFu_DFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905535436158-ccef0nem0a092j3h15ps1rtfr28o9g7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905535436158:android:ca43e4fa7d9d002a",
+        "android_client_info": {
+          "package_name": "com.example.hp.ambulenceproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905535436158-ccef0nem0a092j3h15ps1rtfr28o9g7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB863rM2no7D_NVvaTbFaDxK5CtGFu_DFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905535436158-ccef0nem0a092j3h15ps1rtfr28o9g7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

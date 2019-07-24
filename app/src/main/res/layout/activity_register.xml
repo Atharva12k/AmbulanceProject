@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/customborderblue"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="56dp"
+        android:paddingRight="24dp"
+        android:textColor="#000"
+        android:textColorHint="#888383">
+
+        <ImageView
+            android:id="@+id/jio_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/download"
+            android:background="@drawable/customborderblue"/>
+
+        <!--  Name Label -->
+
+        <EditText
+            android:id="@+id/input_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/customborderblue"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:textColor="#000"
+            android:textColorHint="#888383" />
+
+
+        <!-- Email Label -->
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/customborderblue"
+            android:textColor="#000"
+            android:textColorHint="#888383" />
+
+        <!-- Password Label -->
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/customborderblue"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#000"
+            android:textColorHint="#888383" />
+        <!--Retype Password -->
+        <EditText
+            android:id="@+id/input_retypePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Retype Password"
+            android:inputType="textPassword"
+            android:background="@drawable/customborderblue"
+            android:textColor="#000"
+            android:textColorHint="#888383" />
+
+        <EditText
+            android:id="@+id/input_anumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Ambulence Registration Number"
+            android:inputType="textVisiblePassword"
+            android:background="@drawable/customborderblue"
+            android:textColor="#000"
+            android:textColorHint="#888383" />
+
+        <!-- Signup Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Create Account"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:background="@drawable/roundedbuttonblue"
+            android:textColorHint="#888383"/>
+
+        <TextView
+            android:id="@+id/link_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Already signed in? Login"
+            android:textColor="#68a0b0"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
