@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,21 +21,18 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 
-
-
-
 public class Register extends AppCompatActivity {
 
     private static final String TAG = "Register";
     EditText _emailText;
     EditText _passwordText;
     EditText _retypePasswordText;
-    EditText _ambulenceNumber;
+    EditText _contactNumber;
     Button _signupButton;
     TextView _loginLink;
     EditText _fnameText;
     static String uid = "";
-    private String fname,email,password,retypePassword,ambNumber;
+    private String fname,email,password,retypePassword,conNumber;
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firestore;
     private CollectionReference collectionReference;
@@ -59,7 +55,7 @@ public class Register extends AppCompatActivity {
         _signupButton = findViewById(R.id.btn_signup);
         _loginLink = findViewById(R.id.link_login);
         _fnameText = findViewById(R.id.input_fname);
-        _ambulenceNumber=findViewById(R.id.input_anumber);
+        _contactNumber = findViewById(R.id.input_anumber);
         firebaseAuth = FirebaseAuth.getInstance();
         hashMap = new HashMap<>();
         firestore = FirebaseFirestore.getInstance();
@@ -80,8 +76,8 @@ public class Register extends AppCompatActivity {
                             if(task.isSuccessful()) {
                             //Toast.makeText(getBaseContext(),"User created successfully",Toast.LENGTH_SHORT).show();
                             user = firebaseAuth.getCurrentUser();
-                            documentReference = firestore.collection("AMBULANCE LIST").document(user.getUid());
-                            hashMap.put("Name",fname);hashMap.put("Email",email);hashMap.put("Ambulence Number",ambNumber);
+                            documentReference = firestore.collection("RESPONDER LIST").document(user.getUid());
+                            hashMap.put("Name",fname);hashMap.put("Email",email);hashMap.put("Responder Number",conNumber);
                             documentReference.set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
@@ -135,8 +131,8 @@ public class Register extends AppCompatActivity {
         email = _emailText.getText().toString();
         password = _passwordText.getText().toString();
         retypePassword = _retypePasswordText.getText().toString();
-        ambNumber=_ambulenceNumber.getText().toString();
-        if (email.equals("") || password.equals("") || fname.equals("") || ambNumber.equals("") ) {
+        conNumber=_contactNumber.getText().toString();
+        if (email.equals("") || password.equals("") || fname.equals("") || conNumber.equals("") ) {
             return false;
         }
         return true;

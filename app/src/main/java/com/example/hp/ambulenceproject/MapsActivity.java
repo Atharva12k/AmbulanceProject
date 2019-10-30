@@ -115,7 +115,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             Map<String, Object> map = new HashMap<>();
                             map.put("Token", token);
-                            firestore.collection("AMBULANCE LIST").document(firebaseAuth.getCurrentUser().getUid())
+                            firestore.collection("RESPONDER LIST").document(firebaseAuth.getCurrentUser().getUid())
                                     .update(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
@@ -206,7 +206,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             geoPoint = new GeoPoint(Constants.CurrentLocation.latitude, Constants.CurrentLocation.longitude);
             Log.d("FirebaseUser","user ID: "+user.getUid()+" GeoPoint: "+geoPoint.getLatitude()+" "+geoPoint.getLongitude());
             hashMap.put("MyLocation",geoPoint);
-            documentReference = firestore.collection("AMBULANCE LIST").document(user.getUid());
+            documentReference = firestore.collection("RESPONDER LIST").document(user.getUid());
             documentReference.update("MyLocation",geoPoint).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
